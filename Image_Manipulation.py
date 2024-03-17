@@ -3,6 +3,15 @@ import cv2  # เรียกใช้งาน OpenCV
 from PIL import Image  # เรียกใช้งานไลบรารี PIL (Python Imaging Library) สำหรับการจัดการรูปภาพ
 import numpy as np  # เรียกใช้งานไลบรารี NumPy สำหรับการจัดการข้อมูลอาร์เรย์
 
+# สำหรับตั้งค่าภาพพื้นหลัง 
+page_bg_img = '''<style>
+.stApp {
+    background-image: url('https://img.freepik.com/free-vector/hand-drawn-minimal-background_23-2149001650.jpg');
+    background-size: cover;
+}
+<style>'''
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 # ฟังก์ชันสำหรับปรับความสว่างของรูปภาพโดยใช้ Histogram Equalization
 def adjust_brightness(image, brightness):
     # แปลงรูปภาพเป็นสีเทา
@@ -40,8 +49,8 @@ def sketch_image(image):
 
 # ฟังก์ชันหลักของโปรแกรม
 def main():
+    # สร้างเว็บแอปพลิเคชัน
     st.title("เว็บไซต์ปรับแต่งรูปภาพ")
-    
     st.sidebar.title("Options")
     mode = st.sidebar.radio("เลือกโหมด:", ("โหมดสร้างภาพ Sketch", "โหมดการปรับความสว่างรูปภาพ"))
     
