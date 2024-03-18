@@ -15,4 +15,4 @@
 ## presentation:
   link [https://www.canva.com/design/DAF_xxkE9y4/pQQ0aVVfpPaQ2l6kg8UbMQ/view]
 ## video:
-   link [public/ubu]
+   link [https://youtu.be/pjrBpk_rW84]
